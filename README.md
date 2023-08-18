@@ -13,5 +13,5 @@
 - https://github.com/andre-costa-coelho/IBMEC-Estrutura-de-Dados/tree/avaliacoes
 
 ## Exercícios:
-- Praticar é fundamental para o domínio das estruturas de dados. Nesta seção, você encontrará uma variedade de exercícios realizados por mim. 
+- Praticar é fundamental para o domínio da linguagem Golang. Nesta seção, você encontrará uma variedade de exercícios realizados por mim. 
 - https://github.com/andre-costa-coelho/IBMEC-Estrutura-de-Dados/tree/exercicios
