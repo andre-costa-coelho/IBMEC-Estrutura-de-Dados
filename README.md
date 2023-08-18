@@ -6,12 +6,12 @@
 
 ## Conteúdo das Aulas:
 - Nesta seção, você encontrará os Código-fontes discutidos durante as aulas do curso de Estrutura de Dados do IBMEC.
-- https://github.com/andre-costa-coelho/IBMEC-Estrutura-de-Dados/tree/conteudo-das-aulas
+- [Acesse os conteúdos das aulas](https://github.com/andre-costa-coelho/IBMEC-Estrutura-de-Dados/tree/conteudo-das-aulas)
 
 ## Avaliações:
 - Nesta seção, você encontrará os códigos desenvolvidos por mim relacionados às avaliações propostas pelo professor.
-- https://github.com/andre-costa-coelho/IBMEC-Estrutura-de-Dados/tree/avaliacoes
+- [Acesse as avaliações](https://github.com/andre-costa-coelho/IBMEC-Estrutura-de-Dados/tree/avaliacoes)
 
 ## Exercícios:
 - Praticar é fundamental para o domínio da linguagem Golang. Nesta seção, você encontrará uma variedade de exercícios realizados por mim. 
-- https://github.com/andre-costa-coelho/IBMEC-Estrutura-de-Dados/tree/exercicios
+- [Acesse os exercícios](https://github.com/andre-costa-coelho/IBMEC-Estrutura-de-Dados/tree/exercicios)
