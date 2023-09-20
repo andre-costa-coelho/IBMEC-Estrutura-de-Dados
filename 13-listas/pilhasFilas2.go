@@ -49,10 +49,10 @@ func insereFila(f * [M]int, in *int, fim *int, valor int){
   }
 
   if *in == *fim && *fim == -1 {
-    *in, *fim == 0,0
+    *in, *fim = 0,0
   } else {
     *fim = (*fim + 1) % M
   }
-  f[fim] = valor
+  f[*fim] = valor
   
 }
