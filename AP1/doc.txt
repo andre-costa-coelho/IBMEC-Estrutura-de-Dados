@@ -1,0 +1,48 @@
+Tipos:
+-Pedido
+package pedidos
+
+var totalPedidos = 0
+
+type Pedido struct {
+    ID int
+    Delivery bool
+    Produtos [10]ProdutoPedido // 10 produtos por pedido
+    // id int
+    // quantidade int
+    // func defValor()
+    Datahora time.Time
+    ValorTotal float64
+}
+
+-ListaPedidos
+max 1000 itens
+Fila
+Adicionar 
+Expandir /*-Métricas: AtualizarTempoExpedicao*/
+
+
+func defID()
+
+func calcularValorTotal()
+
+
+-Produto: (Struct)
+package produtos 
+
+var totalProdutos = 0
+
+type Produto struct {
+    ID int
+    Nome string
+    Preco float64
+    Descricao string
+}
+
+func (p *Produto) defID(id int) {
+    p.ID = id
+}
+
+-Métricas:
+AtualizarTempoExpedicao
+
