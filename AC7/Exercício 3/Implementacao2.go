@@ -55,6 +55,7 @@ func main() {
 	l.RemoverNo(1)
 	l.RemoverNo(10)
 	l.ExibirListaDuplamenteEncadeada()
+	fmt.Println("Certo...")
 }
 
 // ExibirListaDuplamenteEncadeada exibe a lista duplamente encadeada
