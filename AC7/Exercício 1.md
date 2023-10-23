@@ -5,7 +5,7 @@
 ```sh
 PROGRAMA exibirNos (lista) {
 nó_atual := lista.primeiro
-    ENQUANTO nó_atual != *NULL* 
+    ENQUANTO nó_atual != NULL 
     {
         ESCREVE(nó_atual.dado)
         nó_atual := nó_atual.proximo
@@ -22,7 +22,7 @@ ENCERRA
 PROGRAMA insereInicio (lista,dado) {
 novoNo := No(dado)
     no := lista.primeiro
-    SE no == *NULL* 
+    SE no == NULL 
     {
        lista,primeiro = novoNo
        novoNo.proxima = novoNo
@@ -42,14 +42,14 @@ novoNo := No(dado)
 ```sh
 PROGRAMA excluiPrimeiroNo (lista) {
 no := lista.primeiro
-	SE no == nil 
+	SE no == NULL
     {
 		RETORNA
 	}
 
 	SE no.proxima == lista.primeiro 
     {
-		lista.primeiro = nil
+		lista.primeiro = NULL
 		RETORNA
 	}
 
