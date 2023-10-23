@@ -47,7 +47,7 @@ no := lista.primeiro
 		RETORNA
 	}
 
-	se no.proxima == lista.primeiro 
+	SE no.proxima == lista.primeiro 
     {
 		lista.primeiro = nil
 		RETORNA
