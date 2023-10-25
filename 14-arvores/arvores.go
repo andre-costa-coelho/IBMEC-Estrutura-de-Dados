@@ -5,6 +5,7 @@ import "fmt"
 type No struct {
 	Chave  int
 	Esq, Dir *No
+	Altura int
 }
 
 type Arvore struct {
@@ -71,12 +72,10 @@ func imprimePosOrdem(n *No) {
 
 func buscaArvore(a Arvore, valor int) *No {
 	if a.Raiz != nil {
-		return nil
+		return  nil
 	}
 
-	var noProcurado *No
-	buscaSimetrico(a.Raiz, valor, &noProcurado)
-	return noProcurado
+	return buscaPreOrdem(a.Raiz, valor)
 }
 
 func buscaSimetrico(n *No, valor int, nEcontrado **No) {
@@ -88,5 +87,63 @@ func buscaSimetrico(n *No, valor int, nEcontrado **No) {
 	}
 	if n.Dir != nil {
 		buscaSimetrico(n.Dir, valor, nEcontrado)
+	}
+}
+
+func buscaPosOrdem(n *No, valor int, nEcontrado **No) {
+	if n.Esq != nil {
+		buscaPosOrdem(n.Esq, valor, nEcontrado)
+	}
+	if n.Dir != nil {
+		buscaPosOrdem(n.Dir, valor, nEcontrado)
+	}
+	if n.Chave == valor {
+		*nEcontrado = n
+	}
+}
+
+func buscaPreOrdem(n *No, valor int) *No {
+	if n.Chave == valor {
+		return n
+	}
+	var noProcurado *No
+
+	if n.Esq != nil {
+		noProcurado = buscaPreOrdem(n.Esq, valor)
+	}
+	if n.Dir != nil {
+		noProcurado = buscaPreOrdem(n.Dir, valor)
+	}
+	return noProcurado
+}
+
+func calculaAltura(n *No) {
+	if n.Esq != nil {
+		calculaAltura(n.Esq)
+	}
+	if n.Dir != nil {
+		calculaAltura(n.Dir)
+	}
+	calculaAltura(n)
+}
+
+func calculaAlturaNo(n *No) {
+	var altE, altD int
+	if n.Esq != nil {
+		altE = 0
+	} else {
+		altE = n.Esq.Altura
+	}
+
+	if n.Dir != nil {
+		altD = 0
+	} else {
+		altD = n.Dir.Altura
+	}
+
+	if altE > altD {
+		n.Altura = altE + 1
+	} else {
+		n.Altura = altD + 1
 	}
 }
