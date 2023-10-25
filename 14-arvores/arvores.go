@@ -102,19 +102,19 @@ func buscaPosOrdem(n *No, valor int, nEcontrado **No) {
 	}
 }
 
-func buscaPreOrdem(n *No, valor int) *No {
+func buscaPreOrdem(n *No, nPai *No, valor int) (*No, *No) {
 	if n.Chave == valor {
-		return n
+		return n, nPai
 	}
 	var noProcurado *No
 
 	if n.Esq != nil {
-		noProcurado = buscaPreOrdem(n.Esq, valor)
+		noProcurado, nPai = buscaPreOrdem(n.Esq, n, valor)
 	}
 	if n.Dir != nil {
-		noProcurado = buscaPreOrdem(n.Dir, valor)
+		noProcurado, nPai = buscaPreOrdem(n.Dir, n, valor)
 	}
-	return noProcurado
+	return noProcurado, nPai
 }
 
 func calculaAltura(n *No) {
