@@ -147,3 +147,34 @@ func calculaAlturaNo(n *No) {
 		n.Altura = altD + 1
 	}
 }
+
+func insereNo(a Arvore, valorInserir int, valorPai int, posicao string) {
+	if posicao != "esquerda" && posicao != "direita" {
+		fmt.Println("Posição inválida")
+		return
+	}
+
+	no := buscaArvore(a, valorInserir)
+	if no != nil {
+		fmt.Println("Valor já existe na árvore")
+		return
+	}
+
+	noPai := buscaArvore(a, valorPai)
+	if noPai == nil {
+		fmt.Println("Valor pai não encontrado")
+		return
+	}
+
+	if posicao == "esquerda" && noPai.Esq != nil {
+		fmt.Println("Já existe um nó na posição esquerda")
+		return
+	}
+
+	no = &No{Chave: valorInserir}
+	if posicao == "esquerda" {
+		noPai.Esq = no
+	} else {
+		noPai.Dir = no
+	}
+}
