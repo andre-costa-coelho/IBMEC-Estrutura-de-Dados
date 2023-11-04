@@ -75,7 +75,7 @@ ant, no := busca.no(ch)
 ```
 ### Remoção de um nó:
 ```sh
-PROGRAMA removeListaDup (lista){
+PROGRAMA removeListaDup (lista,ch){
     no := lista.primeiro
     ENQUANTO no != NULL 
     {

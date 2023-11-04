@@ -27,6 +27,8 @@ func main() {
 
 	fmt.Println("\nInserindo um nó na lista circular:")
 	l.InserirNaPrimeiraPosicao(6)
+	l.InserirNaPrimeiraPosicao(12)
+	l.InserirNaPrimeiraPosicao(1)
 	l.ExibirListaCircular()
 
 	fmt.Println("\nRemovendo um nó na lista circular:")
@@ -36,7 +38,14 @@ func main() {
 	fmt.Println("\nRemovendo todos os nós:")
 	l.RemoverPrimeiroNo()
 	l.RemoverPrimeiroNo()
+	l.RemoverPrimeiroNo()
+	l.RemoverPrimeiroNo()
 	l.ExibirListaCircular()
+	fmt.Println("Certo...")
+
+	fmt.Println("\nRemovendo quando não há nós:")
+	l.RemoverPrimeiroNo()
+	fmt.Println("Certo...")
 }
 
 // ExibirListaCircular exibe a lista circular
