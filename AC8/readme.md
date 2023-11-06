@@ -58,7 +58,8 @@ func main() {
 	imprimeArvore(arv)
 }
 
-// buscaArvore: Busca a partir do nó raiz, o valor passado como parâmetro e retorna: 0 se não tiver árvore, 1 se o valor for encontrado, 2 ou 3 se o valor não for encontrado e indicar o lado da árvore que deve ser inserido
+/* buscaArvore: Busca a partir do nó raiz, o valor passado como parâmetro e retorna: 0 se não tiver árvore,
+1 se o valor for encontrado, 2 ou 3 se o valor não for encontrado e indicar o lado da árvore que deve ser inserido*/
 func buscaArvore(opcao *int, no **No, valor int) {
 	if *no == nil {
 		*opcao = 0
@@ -115,5 +116,4 @@ func insereArvore(arvore *Arvore, valor int) string {
 		return "Valor inserido com sucesso"
 	}
 }
-
 ```
